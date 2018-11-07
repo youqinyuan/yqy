@@ -79,7 +79,7 @@ Page({
   toDetail(e) {
     const item = e.currentTarget.dataset.item
     wx.navigateTo({
-      url: `/pages/detail/detail?id=${item.id}&price=${item.price}&title=${item.title}&image=${item.image_url}`,
+      url: `/pages/detail/detail?id=${item.id}&price=${item.price}&title=${item.title}&image_url=${item.image_url}`,
     })
   },
   /**

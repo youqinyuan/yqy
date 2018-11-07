@@ -32,7 +32,7 @@ page{
   border: 2rpx solid #f1e608;
 }
 .ek-list{
-  height: 160rpx;
+  height: 180rpx;
   background: #fff;
   margin-top: 20rpx;
   display: flex;
@@ -42,8 +42,8 @@ page{
   margin-left: 20rpx;
 }
 .ek-list-item{
-  margin-top: 30rpx;
-  width: 100rpx;
+  margin-top: 40rpx;
+  width: 140rpx;
   margin-left: 20rpx;
   margin-right: 20rpx;
   height: 100rpx;
@@ -53,7 +53,7 @@ page{
   height: 100%;
 }
 .ek-list-title{
-  margin-top: 20rpx;
+  margin-top: 40rpx;
   width: 320px;
   margin-left: 40rpx;
   font-size: 30rpx;
@@ -61,7 +61,7 @@ page{
 .ek-diff{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20rpx;
+  margin-top: 30rpx;
 }
 .btn{
   width: 40rpx;
@@ -97,7 +97,7 @@ page{
   right: 0;
 }
 .ek-total-box{
-  margin-left: 10rpx;
+  margin-left: 20rpx;
 }
 .ek-total-btn{
   position: absolute;

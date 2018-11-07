@@ -1,6 +1,5 @@
 // pages/cart/cart.js
 const app = getApp()
-console.log(app.cart)
 Page({
 
   /**
@@ -10,14 +9,11 @@ Page({
     isShow:true,
     list:[]
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      list:app.cart
-    })
+    
   },
 
   /**
@@ -31,7 +27,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      list: app.cart
+    })
   },
 
   /**

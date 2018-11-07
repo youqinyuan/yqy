@@ -1,5 +1,6 @@
 // pages/detail/detail.js
 import ajax from '../../utils/request.js';
+const app = getApp();
 Page({
 
   /**
@@ -7,9 +8,14 @@ Page({
    */
   data: {
     goods:[],
+    options:{},
     isShow:true
   },
-  addToCart () {
+  addToCart (e) {
+   const item = e.currentTarget.dataset.item
+    app.addToCart(item);
+  },
+  addCart () {
     this.setData({
       isShow: false
     }) 
@@ -22,7 +28,7 @@ Page({
   toDetail(e) {
     const item = e.currentTarget.dataset.item
     wx.navigateTo({
-      url: `/pages/detail/detail?id=${item.id}&price=${(item.price/100).toFixed(2)}&title=${item.title}&image=${item.image_url}`,
+      url: `/pages/detail/detail?id=${item.id}&price=${(item.price / 100).toFixed(2)}&title=${item.title}&image_url=${item.image_url}`,
     })
   },
   /**

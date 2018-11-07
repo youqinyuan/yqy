@@ -3,6 +3,7 @@ App({
   onLaunch() {
     this.setBage();
   },
+
   cart:wx.getStorageSync("ek-cart") || [],
   setBage() {
     const total = this. cart . reduce((result,item) =>{
@@ -13,6 +14,9 @@ App({
       index: 2,
       text: `${total}`
     })
+  },
+  minusCount(e){
+    console.log(e)
   },
   addToCart(item) {
     const isInCart = this.cart.some(cartItem => cartItem.id === item.id);

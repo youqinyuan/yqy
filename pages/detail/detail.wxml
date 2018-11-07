@@ -2,7 +2,7 @@
 <view class="ek-wrapper" wx:if="{{isShow}}">
   <view class="ek-wrapper-list">
     <view class="ek-item">
-    <image src="{{options.image}}" class="ek-img"></image>
+    <image src="{{options.image_url}}" class="ek-img"></image>
   </view>
   <view class="ek-title">{{options.title}}</view>
   <view class="ek-price">￥{{options.price}}</view>
@@ -52,7 +52,7 @@
       <image src="../../libs/img/message.png" class="ek-bottom-img"></image>
       <image src="../../libs/img/cart-normal.png" class="ek-bottom-item"></image>
     </view>
-    <view class="ek-add-btn" catchtap="addToCart">加入购物车</view>
+    <view class="ek-add-btn" catchtap="addCart">加入购物车</view>
     <view class="ek-buy-btn">立即购买</view>
   </view>
 </view>
@@ -60,7 +60,7 @@
   <view class="ek-modal-bottom">
     <view class="ek-modal-list">
       <view class="ek-modal-item">
-       <image src="{{options.image}}" class="ek-modal-img"></image>
+       <image src="{{options.image_url}}" class="ek-modal-img"></image>
       </view>
       <view class="ek-modal-text">
       <view class="ek-modal-title">{{options.title}}</view>
@@ -76,7 +76,7 @@
       <view class="btn">+</view>
     </view>
   </view>
-  <view class="ek-modal-button">加入购物车</view>
+  <view class="ek-modal-button" data-item="{{options}}" catchtap="addToCart">加入购物车</view>
   </view>
 </view>
 

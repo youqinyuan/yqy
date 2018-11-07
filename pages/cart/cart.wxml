@@ -7,8 +7,10 @@
     <view class="ek-text">购物车为空~</view>
     <view class="ek-button">去逛逛</view>
   </view>
+  <view class="ek-container-content" wx:if="{{isShow}}">
   <view class="ek-list"
   wx:for="{{list}}"
+  wx:key="{{item.id}}"
    >
     <checkbox-group class="ek-box">
     <label class="checkbox">
@@ -23,11 +25,12 @@
       <view class="ek-list-price">￥{{item.price}}</view> 
     </view>
     <view class="ek-diff">
-      <view class="btn">-</view>
+      <view class="btn" data-id="{{item.id}}" bindtap='minusCount'>-</view>
       <view class="count">{{item.count}}</view>
-      <view class="btn">+</view>
+      <view class="btn" data-id="{{item.itid}}" bindtap='addCount'>+</view>
       <view class="del">删除</view>
     </view>  
+  </view>
   </view>
   <view class="ek-total">
   <checkbox-group class="ek-total-box">

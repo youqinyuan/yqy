@@ -2,9 +2,9 @@
   "pages": [
     "pages/home/home",
     "pages/mall/mall",
+    "pages/detail/detail",
     "pages/cart/cart",
-    "pages/mine/mine",
-    "pages/detail/detail"
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",
