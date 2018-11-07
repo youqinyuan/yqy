@@ -1,0 +1,148 @@
+<!--pages/home/home.wxml-->
+<view class='ek-wrapper'>
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='ek-wrapper-nav'>
+    <image src="https://img.yzcdn.cn/upload_files/2018/05/31/FhvY6gPxiPF02G2IQ1z_I3-yYAxM.jpg?imageView2/2/w/730/h/0/q/75/format/webp" class="ek-img"></image>
+  </view>
+  <view class="ek-wrapper-content">
+    <view class="ek-wrapper-content-list">
+      <view class="ek-item">
+        <view class="ek-text">
+        <text class="ek-text-item">20</text>
+        <text class="ek-text-price">元</text>
+        </view>
+        <view class="ek-title">满198.00元可用</view>
+      </view>
+      <view class="ek-item">
+        <view class="ek-text">
+        <text class="ek-text-item">40</text>
+        <text class="ek-text-price">元</text>
+        </view>
+        <view class="ek-title">满238.00元可用</view>        
+      </view>
+      <view class="ek-item">
+        <view class="ek-text">
+        <text class="ek-text-item">50</text>
+        <text class="ek-text-price">元</text>
+        </view>
+        <view class="ek-title">满418.00元可用</view>        
+      </view>
+    </view>
+  </view>
+  <view class="ek-container">
+    <view class="ek-container-sousuo">
+      <image src="../../libs/img/sousuo.png" class="ek-container-img"></image>
+    </view>
+    <view class="ek-container-title">搜索商品</view>
+  </view>
+  <view class="ek-list">
+    <view
+    wx:for="{{list}}"
+    wx:key="{{item.id}}" 
+    class="ek-list-content">
+      <view class="ek-list-item">
+        <image src="{{item.img}}" class="ek-list-img"></image>    
+      </view>
+      <view class="ek-list-text">{{item.title}}</view>
+    </view>
+  </view>
+  <view class="ek-recommend">
+    <view class="ek-recommend-item-title">
+      <image src="https://img.yzcdn.cn/upload_files/2018/07/20/FiHVQnzAtP-VikBAdCMveXT6JFM3.jpg?imageView2/2/w/730/h/0/q/75/format/webp" class="ek-recommend-img"></image>
+    </view>
+    <view class="ek-recommend-container">
+      <view 
+      wx:for="{{recommend}}"
+      data-item="{{item}}"
+      catchtap="toDetail"
+      class="ek-recommend-list">
+        <view class="ek-recommend-item">
+          <image src="{{item.image_url}}" class="ek-recommend-item-img"></image>
+        </view>
+        <view class="ek-recommend-title">{{item.title}}</view>
+        <view class="ek-recommend-price">￥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="ek-cream">
+    <view class="ek-cream-item-title">
+      <image src="https://img.yzcdn.cn/upload_files/2018/07/20/FgYMjBj9LjLIo4KeKrnWZQ2UHvVn.jpg?imageView2/2/w/730/h/0/q/75/format/webp" class="ek-cream-img"></image>
+    </view>
+    <view class="ek-cream-container">
+      <view 
+       wx:for="{{cream}}"
+       wx:key="{{item.id}}"
+       data-item="{{item}}"
+       catchtap="toDetail"
+      class="ek-cream-list">
+        <view class="ek-cream-item">
+          <image src="{{item.image_url}}" class="ek-cream-item-img"></image>
+        </view>
+        <view class="ek-cream-title">{{item.title}}</view>
+        <view class="ek-cream-price">￥{{item.price}}</view>
+      </view>
+    </view> 
+  </view>
+  <view class="ek-musi">
+    <view class="ek-musi-item-title">
+      <image src="https://img.yzcdn.cn/upload_files/2018/07/20/Ft8Ed7GVOR2cD-9C1twQO5b_A_Tm.jpg?imageView2/2/w/730/h/0/q/75/format/webp" class="ek-musi-img"></image>
+    </view>
+    <view class="ek-musi-container">
+      <view 
+       wx:for="{{musi}}"
+       wx:key="{{item.id}}"
+       data-item="{{item}}"
+       catchtap="toDetail"
+       class="ek-musi-list">
+        <view class="ek-musi-item">
+          <image src="{{item.image_url}}" class="ek-musi-item-img"></image>
+        </view>
+        <view class="ek-musi-title">{{item.title}}</view>
+        <view class="ek-musi-price">￥{{item.price}}</view>
+      </view>
+    </view> 
+  </view>
+  <view class="ek-cheese">
+    <view class="ek-cheese-item-title">
+      <image src="https://img.yzcdn.cn/upload_files/2018/07/20/FttQSrE1avWUbjMdFXn1E2BsTbjq.jpg?imageView2/2/w/730/h/0/q/75/format/webp" class="ek-cheese-img"></image>
+    </view>
+    <view class="ek-cheese-container">
+      <view 
+       wx:for="{{cheese}}"
+       wx:key="{{item.id}}"
+       data-item="{{item}}"
+       catchtap="toDetail"
+      class="ek-cheese-list">
+        <view class="ek-cheese-item">
+          <image src="{{item.image_url}}" class="ek-cheese-item-img"></image>
+        </view>
+        <view class="ek-cheese-title">{{item.title}}</view>
+        <view class="ek-cheese-price">￥{{item.price}}</view>
+      </view>
+    </view> 
+  </view>
+  <view class="ek-recommend">
+    <view class="ek-recommend-item-title">
+      <image src="https://img.yzcdn.cn/upload_files/2018/07/20/FvObMDd2NrUHQWEwqu_XVC4s4Yoq.jpg?imageView2/2/w/730/h/0/q/75/format/webp" class="ek-recommend-img"></image>
+    </view>
+    <view class="ek-recommend-cake">
+      <image src="https://img.yzcdn.cn/upload_files/2018/06/04/FtptnUzigvjj3yeWt66HRI2fuYN_.jpg?imageView2/2/w/730/h/0/q/75/format/webp" class="ek-recommend-cake-img"></image>
+    </view>
+  </view>
+  <view class="ek-recommend">
+    <view class="ek-recommend-item-title">
+      <image src="https://img.yzcdn.cn/upload_files/2018/07/20/Fh819oOdbz7mh15kiBG5vI13VYEx.jpg?imageView2/2/w/730/h/0/q/75/format/webp" class="ek-recommend-img"></image>
+    </view>
+    <view class="ek-recommend-club">
+      <image src="https://img.yzcdn.cn/upload_files/2018/08/04/FqrlHmm82bo7U2RaKhE4UgP5Wk1w.jpg?imageView2/2/w/730/h/0/q/75/format/webp" class="ek-recommend-club-img"></image>
+    </view>
+  </view>
+</view>
+

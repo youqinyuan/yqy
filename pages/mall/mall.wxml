@@ -1,0 +1,19 @@
+<!--pages/mall/mall.wxml-->
+<scroll-view
+scroll-y
+bindscrolltolower="loadMore"
+bindscrolltoupper="refreshCake"
+class='ek-scroll'
+lower-threshold='100'
+>
+  <view class="ek-list" wx:for="{{cakes}}" wx:key="{{item.id}}" catchtap="toDetail" data-item="{{item}}">
+    <view class="ek-item">
+      <image src="{{item.image_url}}" class="ek-img"></image>
+    </view>
+    <view class="ek-title">
+      <view class="ek-text">{{item.title}}</view>
+      <view class="ek-price">￥{{item.price}}</view>
+    </view>
+     <view class="ek-btn" data-id="{{item.id}}" catchtap="addToCart">加入购物车</view>
+  </view>
+</scroll-view>

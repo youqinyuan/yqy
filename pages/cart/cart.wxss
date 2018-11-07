@@ -1,0 +1,131 @@
+/* pages/cart/cart.wxss */
+page{
+  background-color: #f5f3f3;
+}
+.ek-container{
+  width: 100%;
+  text-align: center;
+  height: 400rpx;
+  margin-top: 200rpx;
+  margin-bottom: 80rpx;
+}
+.ek-item{
+  width: 15%;
+  height: 90rpx;
+  margin: 0 auto;
+  margin-bottom: 80rpx;
+}
+.ek-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-text{
+  font-size: 30rpx;
+}
+.ek-button{
+  width: 30%;
+  font-size: 30rpx;
+  color: #f1e608;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin: 20rpx auto;
+  border: 2rpx solid #f1e608;
+}
+.ek-list{
+  height: 160rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  display: flex;
+}
+.ek-box{
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+}
+.ek-list-item{
+  margin-top: 30rpx;
+  width: 100rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  height: 100rpx;
+}
+.ek-list-item-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-list-title{
+  margin-top: 20rpx;
+  width: 320px;
+  margin-left: 40rpx;
+  font-size: 30rpx;
+}
+.ek-diff{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+.btn{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40rpx;
+  border: 2rpx solid #cdcdcd;
+}
+.del{
+  width: 140rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border: 2rpx solid #cdcdcd;
+}
+.ek-bottom-contain{
+  width: 100%;
+  height: 80rpx;
+}
+.ek-total{
+  display: flex;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  height: 80rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.ek-total-box{
+  margin-left: 10rpx;
+}
+.ek-total-btn{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  background-color: #f1e608;
+  text-align: center;
+  color: #fff;
+}
+checkbox .wx-checkbox-input{
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx; 
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border: none;
+   background: #f1e608;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx;
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx;
+   color:#fff;
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}

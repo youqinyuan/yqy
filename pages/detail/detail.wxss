@@ -1,0 +1,255 @@
+/* pages/detail/detail.wxss */
+.ek-item{
+  width: 100%;
+  height: 600rpx;
+}
+.ek-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-title{
+  margin-left: 20rpx;
+}
+.ek-price{
+  margin-left: 20rpx;
+  color: rgb(233, 218, 17);
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.ek-yunfei{
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #cdcdcd;
+}
+.ek-mall{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  background: rgb(248, 245, 245);
+}
+.ek-mall-img{
+  margin-top: 10rpx;
+  margin-left: 60rpx;
+  margin-right: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.ek-mall-text{
+  font-size: 36rpx;
+}
+.ek-xianxia{
+  font-size: 36rpx;
+  margin-left: 20rpx;
+  margin-top: 60rpx;
+  margin-bottom: 30rpx;
+}
+.ek-shop{
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+.ek-qiye-img{
+  margin-top: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.ek-shop-text{
+  color:#cdcdcd;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+.ek-detail{
+  width: 100%;
+  height: 900rpx;
+}
+.ek-detail-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-explain{
+  height: 80rpx;
+  margin-bottom: 60rpx;
+  border-bottom: 2rpx solid #cdcdcd;
+}
+.ek-explain-price{
+  width: 20%;
+  position: absolute;
+  left:300rpx;
+  top:2060rpx;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  height: 40rpx;
+  border: 2rpx solid #cdcdcd;
+}
+.ek-recommend{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  padding-bottom: 40rpx;
+}
+.ek-content{
+  width: 95%;
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.ek-content-list{
+  height: 500rpx;
+}
+.ek-content-item{
+  width: 350rpx;
+  height: 300rpx;
+
+}
+.ek-content-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-content-title{
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.ek-content-price{
+  color:rgb(247, 33, 33);
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.ek-bottom{
+  width: 100%;
+  height: 200rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.ek-bottom-list{
+  position: fixed;
+  bottom:0;
+  left:0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  line-height: 130rpx;
+  height: 130rpx;
+}
+.ek-bottom-list-item{
+  margin-top: 20rpx;
+  width: 30%;
+}
+.ek-bottom-img{
+  width: 90rpx;
+  height: 90rpx;
+  padding-right: 30rpx;
+}
+.ek-bottom-item{
+  width: 90rpx;
+  height: 90rpx;
+}
+.ek-add-btn{
+  margin-left: 45rpx;
+  background: rgb(8, 2, 29);
+  width: 35%;
+  color: #fff;
+  text-align: center;
+}
+.ek-buy-btn{
+  width: 35%;
+  color: #fff;
+  text-align: center;
+  background: rgb(228, 213, 4);
+}
+.ek-modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.7);
+}
+.ek-modal-bottom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 500rpx;
+  background-color: #fff;
+}
+.ek-modal-list{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  height: 150rpx;
+  margin-left: 40rpx;
+}
+.ek-modal-item{
+  position: absolute;
+  bottom:370rpx;
+  width: 160rpx;
+  height: 160rpx;
+}
+.ek-modal-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-modal-text{
+  margin-top: 20rpx;
+  margin-left: 180rpx;
+  font-size: 36rpx;
+}
+.ek-modal-price{
+  margin-top: 10rpx;
+  color: rgb(233, 218, 17);
+}
+.ek-modal-del{
+  margin-top: 20rpx;
+  margin-right: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
+  color: #cdcdcd;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 50%;
+  border: 2rpx solid #cdcdcd;
+}
+.ek-modal-buy{
+  display: flex;
+  justify-content: space-between;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.ek-modal-num{
+  padding-left:40rpx; 
+}
+.ek-modal-btn{
+  margin-right: 40rpx;
+  display: flex;
+  border: 2rpx solid #cdcdcd;
+  width: 240rpx;
+}
+.btn{
+  width: 80rpx;
+  text-align: center;
+}
+.count{
+  text-align: center;
+  width: 80rpx;
+  border-left: 2rpx solid #cdcdcd;
+  border-right: 2rpx solid #cdcdcd;
+}
+.ek-modal-button{
+  width: 100%;
+  height: 100rpx;
+  background-color: rgb(233, 218, 17);
+  line-height: 100rpx;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}

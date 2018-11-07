@@ -1,0 +1,82 @@
+<!--pages/mine/mine.wxml-->
+<view class="ek-list">
+  <view class="ek-item">
+    <image src="https://img.yzcdn.cn/upload_files/2018/06/07/FkAhbHfITzZVye9VTTG1D6m4v5Bi.jpg?imageView2/2/w/520/h/0/q/75/format/webp" class="ek-img"></image>
+  </view>
+  <view class="ek-top-name">
+    <view class="ek-name">沁未央</view>
+    <view class="ek-huiyuan">开通会员</view>      
+  </view>
+  <view class="ek-ma">
+      <image src="https://img.yzcdn.cn/upload_files/2018/06/07/FkAhbHfITzZVye9VTTG1D6m4v5Bi.jpg?imageView2/2/w/520/h/0/q/75/format/webp" class="ek-ma-img"></image>
+  </view>
+</view>
+<view class="ek-myorder">
+ <text>我的订单</text>
+</view>
+<view class="ek-good">
+  <view class="ek-good-list">
+    <view class="ek-good-item">
+      <image src="../../libs/img/daifukuan.png" class="ek-good-img"></image>
+    </view>
+    <view class="ek-good-text">待付款</view>
+  </view>
+  <view class="ek-good-list">
+    <view class="ek-good-item">
+      <image src="../../libs/img/daifahuo.png" class="ek-good-img"></image>
+    </view>
+    <view class="ek-good-text">待发货</view>
+  </view>
+  <view class="ek-good-list">
+    <view class="ek-good-item">
+      <image src="../../libs/img/daishouhuo.png" class="ek-good-img"></image>
+    </view>
+    <view class="ek-good-text">待收货</view>
+  </view>
+  <view class="ek-good-list">
+    <view class="ek-good-item">
+      <image src="../../libs/img/yiwancheng.png" class="ek-good-img"></image>
+    </view>
+    <view class="ek-good-text">已完成</view>
+  </view>
+  <view class="ek-good-list">
+    <view class="ek-good-item">
+      <image src="../../libs/img/tuihuo.png" class="ek-good-img"></image>
+    </view>
+    <view class="ek-good-text">退换货</view>
+  </view>
+</view>
+<view class="ek-myorder-list">
+  <view class="ek-myorder-item">
+    <image src="../../libs/img/daifukuan.png" class="ek-maorder-img"></image>
+  </view>
+ <text>积分记录</text>
+</view>
+<view class="ek-myorder-list">
+  <view class="ek-myorder-item">
+    <image src="../../libs/img/daifukuan.png" class="ek-maorder-img"></image>
+  </view>
+ <text>我的优惠券</text>
+</view>
+<view class="ek-myorder-list">
+  <view class="ek-myorder-item">
+    <image src="../../libs/img/daifukuan.png" class="ek-maorder-img"></image>
+  </view>
+ <text>地址管理</text>
+</view>
+<view class="ek-myorder-list">
+  <view class="ek-myorder-item">
+    <image src="../../libs/img/daifukuan.png" class="ek-maorder-img"></image>
+  </view>
+ <text>分销中心</text>
+</view>
+<view class="ek-myorder-list">
+  <view class="ek-myorder-item">
+    <image src="../../libs/img/daifukuan.png" class="ek-maorder-img"></image>
+  </view>
+ <text>关于我们</text>
+</view>
+<view class="ek-button">在线客服咨询</view>
+
+
+

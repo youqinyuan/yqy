@@ -1,0 +1,276 @@
+/* pages/home/home.wxss */
+swiper{
+  height: 520rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.ek-wrapper-nav{
+  width: 100%;
+  height: 80rpx;
+}
+.ek-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-wrapper-content{
+  width: 100%;
+  height:160rpx;
+}
+.ek-wrapper-content-list{
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+  height: 160rpx;
+  margin-left: 24rpx;
+}
+.ek-item{
+  width: 30%;
+  border-radius: 5px;
+  border: 4rpx solid #f5f5f5;
+  height: 160rpx;
+}
+.ek-text{
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+.ek-text-item{
+  font-size: 48rpx;
+  font-weight:bold; 
+  color:rgb(187, 70, 70);
+}
+.ek-text-price{
+   color:rgb(187, 70, 70);
+   padding-left: 10rpx;
+   font-size: 28rpx;
+}
+.ek-title{
+  font-size: 24rpx;
+}
+.ek-container{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  line-height: 120rpx;
+  margin-top: 10rpx;
+}
+.ek-container-sousuo{
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.ek-container-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-container-title{
+  color: #cdcdcd;
+}
+.ek-list{
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+  justify-content: space-start;
+  flex-wrap: wrap;
+}
+.ek-list-content{
+  width: 20%;
+  height: 180rpx;
+}
+.ek-list-item{
+  width: 100%;
+  height: 150rpx;
+}
+.ek-list-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-list-text{
+  font-size: 24rpx;
+  text-align: center;
+}
+.ek-recommend{
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+.ek-recommend-item-title{
+  width: 100%;
+  height: 140rpx;
+}
+.ek-recommend-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-recommend-container{
+  display: flex;
+  justify-content: space-around;
+}
+.ek-recommend-list{
+  width: 30%;
+}
+.ek-recommend-item{
+  width: 100%;
+  height: 220rpx;
+  margin-bottom: 10rpx;
+}
+.ek-recommend-item-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-recommend-title{
+  font-size: 24rpx;
+  height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.ek-recommend-price{
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  color:#f1e608;
+}
+.ek-recommend-cake{
+  width: 100%;
+  height: 460rpx;
+}
+.ek-recommend-cake-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-recommend-club{
+  width: 100%;
+  height: 360rpx;
+}
+.ek-recommend-club-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-cream{
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+.ek-cream-item-title{
+  width: 100%;
+  height: 140rpx;
+}
+.ek-cream-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-cream-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-start;
+  margin-left: 20rpx;
+}
+.ek-cream-list{
+  width: 30%;
+  margin:0 10rpx;
+}
+.ek-cream-item{
+  width: 100%;
+  height: 220rpx;
+  margin-bottom: 10rpx;
+}
+.ek-cream-item-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-cream-title{
+  font-size: 24rpx;
+  height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.ek-cream-price{
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  color:#f1e608;
+}
+.ek-musi{
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+.ek-musi-item-title{
+  width: 100%;
+  height: 140rpx;
+}
+.ek-musi-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-musi-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-start;
+  margin-left: 20rpx;
+}
+.ek-musi-list{
+  width: 30%;
+  margin:0 10rpx;
+}
+.ek-musi-item{
+  width: 100%;
+  height: 220rpx;
+  margin-bottom: 10rpx;
+}
+.ek-musi-item-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-musi-title{
+  font-size: 24rpx;
+  height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.ek-musi-price{
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  color:#f1e608;
+}
+.ek-cheese{
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+.ek-cheese-item-title{
+  width: 100%;
+  height: 140rpx;
+}
+.ek-cheese-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-cheese-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-start;
+  margin-left: 20rpx;
+}
+.ek-cheese-list{
+  width: 30%;
+  margin:0 10rpx;
+}
+.ek-cheese-item{
+  width: 100%;
+  height: 220rpx;
+  margin-bottom: 10rpx;
+}
+.ek-cheese-item-img{
+  width: 100%;
+  height: 100%;
+}
+.ek-cheese-title{
+  font-size: 24rpx;
+  height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.ek-cheese-price{
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  color:#f1e608;
+}

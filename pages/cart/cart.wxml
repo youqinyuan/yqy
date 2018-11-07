@@ -1,0 +1,44 @@
+<!--pages/cart/cart.wxml-->
+<view class="ek-wrapper">
+  <view class="ek-container" wx:if="{{!isShow}}">
+    <view class="ek-item">
+      <image src="../../libs/img/bag.png" class="ek-img"></image>
+    </view>
+    <view class="ek-text">购物车为空~</view>
+    <view class="ek-button">去逛逛</view>
+  </view>
+  <view class="ek-list"
+  wx:for="{{list}}"
+   >
+    <checkbox-group class="ek-box">
+    <label class="checkbox">
+      <checkbox />
+    </label>
+  </checkbox-group>
+    <view class="ek-list-item">
+      <image src="{{item.image_url}}" class="ek-list-item-img"></image>
+    </view>
+    <view class="ek-list-title">
+      <view class="ek-list-title-text">{{item.title}}</view> 
+      <view class="ek-list-price">￥{{item.price}}</view> 
+    </view>
+    <view class="ek-diff">
+      <view class="btn">-</view>
+      <view class="count">{{item.count}}</view>
+      <view class="btn">+</view>
+      <view class="del">删除</view>
+    </view>  
+  </view>
+  <view class="ek-total">
+  <checkbox-group class="ek-total-box">
+    <label class="checkbox">
+      <checkbox />
+    </label>
+  </checkbox-group>
+    <view class="ek-total-text">全选</view>
+    <view class="ek-total-number">合计：</view>
+    <view class="ek-total-num">￥0</view>
+    <view class="ek-total-btn">去结算</view>
+  </view>
+   <view class="ek-bottom-contain"></view> 
+</view>

@@ -1,0 +1,83 @@
+<!--pages/detail/detail.wxml-->
+<view class="ek-wrapper" wx:if="{{isShow}}">
+  <view class="ek-wrapper-list">
+    <view class="ek-item">
+    <image src="{{options.image}}" class="ek-img"></image>
+  </view>
+  <view class="ek-title">{{options.title}}</view>
+  <view class="ek-price">￥{{options.price}}</view>
+  </view>
+  <view class="ek-yunfei">运费：￥0.00~50.00</view>
+  <view class="ek-mall">
+    <image src="../../libs/img/bag.png" class="ek-mall-img"></image>
+    <view class="ek-mall-text">Ek蛋糕商城</view>
+  </view>
+   <view class="ek-xianxia">线下门店</view>
+   <view class="ek-shop">
+    <view class="ek-qiye">
+      <image src="../../libs/img/checked.png" class="ek-qiye-img"></image>
+    </view>
+    <view class="ek-shop-text">企业认证</view>
+     <view class="ek-qiye">
+      <image src="../../libs/img/checked.png" class="ek-qiye-img"></image>
+    </view>
+     <view class="ek-shop-text">担保交易</view>
+     <view class="ek-qiye">
+      <image src="../../libs/img/checked.png" class="ek-qiye-img"></image>
+    </view>
+    <view class="ek-shop-text">线下门店</view>
+   </view>
+  <view class="ek-detail">
+    <image src="https://img.yzcdn.cn/upload_files/2018/08/19/FvU2OoNkcazcizc7EP-jO4QzewAv.png?imageView2/2/w/730/h/0/q/75/format/webp" class="ek-detail-img" class="ek-detail-img"></image>
+  </view>
+  <view class="ek-explain">
+    <view class="ek-explain-price">价格说明</view> 
+  </view>
+  <view class="ek-recommend">更多精选商品</view>
+  <view class="ek-content">
+    <view class="ek-content-list" 
+    data-item="{{item}}"
+    catchtap="toDetail"
+    wx:for="{{goods}}" wx:key="{{item.id}}">
+      <view class="ek-content-item">
+        <image src="{{item.image_url}}" class="ek-content-img"></image>
+      </view>
+      <view class="ek-content-title">{{item.title}}</view>
+      <view class="ek-content-price">￥{{item.price/100}}.00</view>
+    </view>
+  </view>
+  <view class="ek-bottom">没有更多商品了</view>
+  <view class="ek-bottom-list">
+    <view class="ek-bottom-list-item">
+      <image src="../../libs/img/message.png" class="ek-bottom-img"></image>
+      <image src="../../libs/img/cart-normal.png" class="ek-bottom-item"></image>
+    </view>
+    <view class="ek-add-btn" catchtap="addToCart">加入购物车</view>
+    <view class="ek-buy-btn">立即购买</view>
+  </view>
+</view>
+<view class="ek-modal" wx:else>
+  <view class="ek-modal-bottom">
+    <view class="ek-modal-list">
+      <view class="ek-modal-item">
+       <image src="{{options.image}}" class="ek-modal-img"></image>
+      </view>
+      <view class="ek-modal-text">
+      <view class="ek-modal-title">{{options.title}}</view>
+      <view class="ek-modal-price">￥{{options.price}}</view>
+      </view>
+      <view class="ek-modal-del" catchtap="delModal">X</view>
+    </view>
+    <view class="ek-modal-buy">
+    <view class="ek-modal-num">购买数量</view>
+    <view class="ek-modal-btn">
+      <view class="btn">-</view>
+      <view class="count">1</view>
+      <view class="btn">+</view>
+    </view>
+  </view>
+  <view class="ek-modal-button">加入购物车</view>
+  </view>
+</view>
+
+
