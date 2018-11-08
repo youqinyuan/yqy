@@ -3,10 +3,9 @@ App({
   onLaunch() {
     this.setBage();
   },
-
   cart:wx.getStorageSync("ek-cart") || [],
   setBage() {
-    const total = this. cart . reduce((result,item) =>{
+    const total = this.cart.reduce((result,item) =>{
       result += item.count;
       return result;
     },0)
@@ -14,9 +13,6 @@ App({
       index: 2,
       text: `${total}`
     })
-  },
-  minusCount(e){
-    console.log(e)
   },
   addToCart(item) {
     const isInCart = this.cart.some(cartItem => cartItem.id === item.id);
@@ -35,5 +31,37 @@ App({
     }
     wx.setStorageSync("ek-cart", this.cart)
     this.setBage();
+  },
+  minusCount(id){
+    this.cart = this.cart.map(item =>{
+      if(item.id === id) {
+        if(item.count <= 1){
+          console.log("必须大于1")
+        }else{
+          item.count -=1
+        }
+      }
+      return item;
+    })
+    wx.setStorageSync("ek-cart", this.cart)
+    this.setBage();
+    return this.cart;
+  },
+  addCount(id){
+    this.cart = this.cart.map(item =>{
+      if(item.id === id) {
+        item.count +=1;
+      }
+      return item;
+    })
+    wx.setStorageSync("ek-cart", this.cart)
+    this.setBage();
+    return this.cart;
+  },
+  delCount(id){
+    this.cart = this.cart.filter(item => item.id !== id)
+    wx.setStorageSync("ek-cart", this.cart)
+    this.setBage();
+    return this.cart;
   }
 })

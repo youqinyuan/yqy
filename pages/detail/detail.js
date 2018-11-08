@@ -9,7 +9,7 @@ Page({
   data: {
     goods:[],
     options:{},
-    isShow:true
+    isShow:false
   },
   addToCart (e) {
    const item = e.currentTarget.dataset.item
@@ -17,13 +17,25 @@ Page({
   },
   addCart () {
     this.setData({
-      isShow: false
+      isShow: true
     }) 
   },
   delModal () {
     this.setData({
-      isShow: true
+      isShow: false
     }) 
+  },
+  jumpCart(){
+    wx.switchTab({
+      url: '/pages/cart/cart',
+    })
+    app.setBage();
+  },
+  add(e){
+  
+  },
+  reduce(e){
+
   },
   toDetail(e) {
     const item = e.currentTarget.dataset.item
@@ -35,9 +47,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({
-      title: '正在加载中……',
-    })
     this.setData({
       options
     })

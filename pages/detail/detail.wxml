@@ -1,5 +1,28 @@
 <!--pages/detail/detail.wxml-->
-<view class="ek-wrapper" wx:if="{{isShow}}">
+<view class="ek-modal" wx:if="{{isShow}}">
+  <view class="ek-modal-bottom">
+    <view class="ek-modal-list">
+      <view class="ek-modal-item">
+       <image src="{{options.image_url}}" class="ek-modal-img"></image>
+      </view>
+      <view class="ek-modal-text">
+      <view class="ek-modal-title">{{options.title}}</view>
+      <view class="ek-modal-price">￥{{options.price}}</view>
+      </view>
+      <view class="ek-modal-del" catchtap="delModal">X</view>
+    </view>
+    <view class="ek-modal-buy">
+    <view class="ek-modal-num">购买数量</view>
+    <view class="ek-modal-btn">
+      <view class="btn" data-options="{{options}}" catchtap='reduce'>-</view>
+      <view class="count">1</view>
+      <view class="btn" data-options="{{options}}" catchtap='add'>+</view>
+    </view>
+  </view>
+  <view class="ek-modal-button" data-item="{{options}}" catchtap="addToCart">加入购物车</view>
+  </view>
+</view>
+<view class="ek-wrapper" wx:else>
   <view class="ek-wrapper-list">
     <view class="ek-item">
     <image src="{{options.image_url}}" class="ek-img"></image>
@@ -50,33 +73,10 @@
   <view class="ek-bottom-list">
     <view class="ek-bottom-list-item">
       <image src="../../libs/img/message.png" class="ek-bottom-img"></image>
-      <image src="../../libs/img/cart-normal.png" class="ek-bottom-item"></image>
+      <image src="../../libs/img/cart-normal.png" class="ek-bottom-item" catchtap='jumpCart'></image>
     </view>
     <view class="ek-add-btn" catchtap="addCart">加入购物车</view>
     <view class="ek-buy-btn">立即购买</view>
-  </view>
-</view>
-<view class="ek-modal" wx:else>
-  <view class="ek-modal-bottom">
-    <view class="ek-modal-list">
-      <view class="ek-modal-item">
-       <image src="{{options.image_url}}" class="ek-modal-img"></image>
-      </view>
-      <view class="ek-modal-text">
-      <view class="ek-modal-title">{{options.title}}</view>
-      <view class="ek-modal-price">￥{{options.price}}</view>
-      </view>
-      <view class="ek-modal-del" catchtap="delModal">X</view>
-    </view>
-    <view class="ek-modal-buy">
-    <view class="ek-modal-num">购买数量</view>
-    <view class="ek-modal-btn">
-      <view class="btn">-</view>
-      <view class="count">1</view>
-      <view class="btn">+</view>
-    </view>
-  </view>
-  <view class="ek-modal-button" data-item="{{options}}" catchtap="addToCart">加入购物车</view>
   </view>
 </view>
 

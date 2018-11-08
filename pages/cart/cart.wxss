@@ -54,7 +54,7 @@ page{
 }
 .ek-list-title{
   margin-top: 40rpx;
-  width: 320px;
+  width: 250px;
   margin-left: 40rpx;
   font-size: 30rpx;
 }

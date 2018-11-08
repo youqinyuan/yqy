@@ -6,8 +6,48 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isShow:true,
-    list:[]
+    list:[],
+    totalPrice:0
+  },
+  jumpDetail(e){
+    const item = e.currentTarget.dataset.item
+    wx.navigateTo({
+      url: `/pages/detail/detail?id=${item.id}&price=${item.price}&title=${item.title}&image_url=${item.image_url}`,
+    })
+  },
+  toHome(){
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
+  },
+  getTotalPrice (){
+    const total = app.cart.reduce((result,item) =>{
+     result += item.count*item.price
+      console.log(result)
+        return result
+    },0); 
+    return total
+  },
+  minusCount(e){
+    const id = e.currentTarget.dataset.id;
+    app.minusCount(id)
+    this.setData({
+      list: app.cart
+    })
+  },
+  addCount(e){
+    const id = e.currentTarget.dataset.id;
+    app.addCount(id)
+    this.setData({
+      list: app.cart
+    })
+  },
+  delCount(e) {
+    const id = e.currentTarget.dataset.id;
+    app.delCount(id)
+    this.setData({
+      list: app.cart
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -27,8 +67,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    const total = this.getTotalPrice();
     this.setData({
-      list: app.cart
+      list: app.cart,
+      totalPrice: total
     })
   },
 
