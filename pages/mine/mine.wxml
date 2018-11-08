@@ -1,6 +1,6 @@
 <!--pages/mine/mine.wxml-->
 <view class="ek-list">
-  <view class="ek-list-item" wx:if="{{message}}">
+  <view class="ek-list-item" wx:if="{{isPhoto}}">
     <view class="ek-item">
       <image src="{{message.avatarUrl}}" class="ek-img"></image>
     </view>

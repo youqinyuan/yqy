@@ -1,5 +1,5 @@
 // pages/cart/cart.js
-const app = getApp()
+const app = getApp();
 Page({
 
   /**
@@ -7,25 +7,15 @@ Page({
    */
   data: {
     list:[],
-    totalPrice:0
-  },
-  jumpDetail(e){
-    const item = e.currentTarget.dataset.item
-    wx.navigateTo({
-      url: `/pages/detail/detail?id=${item.id}&price=${item.price}&title=${item.title}&image_url=${item.image_url}`,
-    })
+    totalMoney:0,
+    checkoutNum:0,
+    allcheck:false,
+    changeAllCheck:true
   },
   toHome(){
     wx.switchTab({
       url: '/pages/home/home',
     })
-  },
-  getTotalPrice (){
-    const total = app.cart.reduce((result,item) =>{
-     result += item.count*item.price
-        return result
-    },0); 
-    return total
   },
   minusCount(e){
     const id = e.currentTarget.dataset.id;
@@ -56,7 +46,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+  
   },
 
   /**
@@ -70,10 +60,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const total = this.getTotalPrice().toFixed(2);
     this.setData({
-      list: app.cart,
-      totalPrice: total
+      list: app.cart
     })
   },
 

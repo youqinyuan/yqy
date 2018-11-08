@@ -6,11 +6,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    message: wx.getStorageSync("name") || {}
+   isPhoto:false
   },
+  message: wx.getStorageSync("name") || {},
   bindGetUserInfo(e){
-    console.log(e)
     this.setData({
+      isPhoto:true,
       message:e.detail.userInfo
     },() =>{
       wx.showToast({
@@ -19,15 +20,17 @@ Page({
     })
     wx.setStorageSync("name", e.detail.userInfo)
   },
-  quit(){
+  quit(e){
     wx.removeStorageSync('name')
     this.setData({
-      message:{}
+      message:{},
+      isPhoto: false
     }, () =>{
       wx.showToast({
         title: '退出成功',
       })
     })
+    wx.setStorageSync("name", e.detail.userInfo)
   },
   /**
    * 生命周期函数--监听页面加载
@@ -47,7 +50,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

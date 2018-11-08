@@ -12,11 +12,14 @@
   wx:for="{{list}}"
   wx:key="{{item.id}}"
   data-item="{{item}}"
-  catchtap='jumpDetail'
    >
     <checkbox-group class="ek-box">
     <label class="checkbox">
-      <checkbox />
+      <checkbox 
+      checked="{{item.checked}}"
+      bindtap="changecheck"
+      data-id="{{item.id}}"
+      />
     </label>
   </checkbox-group>
     <view class="ek-list-item">
@@ -37,13 +40,16 @@
   <view class="ek-total" wx:if="{{list.length > 0 }}">
   <checkbox-group class="ek-total-box">
     <label class="checkbox">
-      <checkbox />
+      <checkbox 
+      checked="{{allcheck}}"
+      bindtap='all'
+      />
     </label>
   </checkbox-group>
     <view class="ek-total-text">全选</view>
     <view class="ek-total-number">合计：</view>
-    <view class="ek-total-num">￥{{totalPrice}}</view>
-    <view class="ek-total-btn">去结算</view>
+    <view class="ek-total-num">￥{{totalMoney}}</view>
+    <view class="ek-total-btn">去结算({{checkedNum}})</view>
   </view>
    <view class="ek-bottom-contain"></view> 
 </view>
