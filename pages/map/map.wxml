@@ -1,0 +1,15 @@
+<!--pages/mine/mine.wxml-->
+<map
+  id="map"
+  longitude="{{markers[0].longitude}}"
+  latitude="{{markers[0].latitude}}"
+  scale="15"
+  markers="{{markers}}"
+  show-location
+  style="width: 100%; height: 300px;"
+  bindmarkertap="onMarkerTap"
+></map>
+<button bindtap="onMarkerTap">获取路线</button>
+<button bindtap="callme">13540509850</button>
+<audio src="{{audioSrc}}" id="myAudio" ></audio>
+<image src="{{avatarSrc}}"></image>

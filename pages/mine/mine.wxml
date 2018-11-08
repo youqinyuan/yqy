@@ -1,14 +1,22 @@
 <!--pages/mine/mine.wxml-->
 <view class="ek-list">
-  <view class="ek-item">
-    <image src="https://img.yzcdn.cn/upload_files/2018/06/07/FkAhbHfITzZVye9VTTG1D6m4v5Bi.jpg?imageView2/2/w/520/h/0/q/75/format/webp" class="ek-img"></image>
+  <view class="ek-list-item" wx:if="{{message}}">
+    <view class="ek-item">
+      <image src="{{message.avatarUrl}}" class="ek-img"></image>
+    </view>
+    <view class="ek-top-name">
+      <view class="ek-name">{{message.nickName}}</view>
+      <view class="ek-huiyuan">开通会员</view>      
+    </view>
   </view>
-  <view class="ek-top-name">
-    <view class="ek-name">沁未央</view>
-    <view class="ek-huiyuan">开通会员</view>      
+  <view class="ek-photo" wx:else>
+    <view class="ek-photo-item">
+    <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2786170047,2017674036&fm=26&gp=0.jpg" class="ek-photo-img"></image>
+  </view>
+    <view class="ek-photo-name">小伙伴还没有登录，请登录哦！！！</view>     
   </view>
   <view class="ek-ma">
-      <image src="https://img.yzcdn.cn/upload_files/2018/06/07/FkAhbHfITzZVye9VTTG1D6m4v5Bi.jpg?imageView2/2/w/520/h/0/q/75/format/webp" class="ek-ma-img"></image>
+     <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
   </view>
 </view>
 <view class="ek-myorder">
@@ -76,7 +84,7 @@
   </view>
  <text>关于我们</text>
 </view>
-<view class="ek-button">在线客服咨询</view>
+<view class="ek-button" catchtap='quit'>退出登录</view>
 
 
 

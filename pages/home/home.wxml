@@ -11,6 +11,15 @@
   <view class='ek-wrapper-nav'>
     <image src="https://img.yzcdn.cn/upload_files/2018/05/31/FhvY6gPxiPF02G2IQ1z_I3-yYAxM.jpg?imageView2/2/w/730/h/0/q/75/format/webp" class="ek-img"></image>
   </view>
+  <view class="ek-map" catchtap='jumpPage'>
+    <view class="position">
+      <image src="../../libs/img/position.png" class="position-img"></image>
+    </view>
+    <view class="text">成都市科华路力宝大厦19楼</view>
+    <view class="phone">
+      <image src="../../libs/img/phone.png" class="phone-img"></image>
+    </view>
+  </view>
   <view class="ek-wrapper-content">
     <view class="ek-wrapper-content-list">
       <view class="ek-item">

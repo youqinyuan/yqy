@@ -6,6 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    locationCity: '',
+    isShowClipBtn: false,
     list:[{
       id:1,               
       img:     "https://img.yzcdn.cn/upload_files/2018/07/20/FqHMk6FJZmh95NypGvYIWZ6EB1Xv.png?imageView2/2/w/730/h/0/q/75/format/webp",
@@ -76,6 +78,29 @@ Page({
     musi: [],
     cheese:[]
   },
+  onGetLocation() {
+    wx.getLocation({
+      success: (res) => {
+        wx.request({
+          url: `https://apis.map.qq.com/ws/geocoder/v1/?location=${res.latitude},${res.longitude}&key=5XZBZ-C3TH6-DT6SQ-MGY4L-6XWPS-TRBGR&get_poi=1`,
+          success: (resp) => {
+            this.setData({
+              locationCity: resp.data.result.address_component.city
+            })
+          },
+          fail: function (res) { },
+          complete: function (res) { },
+        })
+      },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  },
+  jumpPage(){
+    wx.navigateTo({
+      url: '/pages/map/map',
+    })
+  },
   toDetail(e) {
     const item = e.currentTarget.dataset.item
     wx.navigateTo({
@@ -86,6 +111,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.onGetLocation();
     ajax.get('https://h5.youzan.com/wscshop/showcase/goodsList.json?tagId=&page=1&pageSize=10&goodsIds=420096174%2C420096669%2C420096580%2C420099673%2C420101348%2C420105120%2C420100430%2C420101995&goodsFrom=0&isAdv=0&offlineId=0&kdt_id=40755689')
     .then(resp =>{
       this.setData({

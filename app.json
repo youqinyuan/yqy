@@ -4,6 +4,7 @@
     "pages/mall/mall",
     "pages/detail/detail",
     "pages/cart/cart",
+    "pages/map/map",
     "pages/mine/mine"
   ],
   "window": {

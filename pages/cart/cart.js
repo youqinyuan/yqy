@@ -23,7 +23,6 @@ Page({
   getTotalPrice (){
     const total = app.cart.reduce((result,item) =>{
      result += item.count*item.price
-      console.log(result)
         return result
     },0); 
     return total
@@ -47,6 +46,10 @@ Page({
     app.delCount(id)
     this.setData({
       list: app.cart
+    },()=>{
+      wx.showToast({
+        title: '删除成功',
+      })
     })
   },
   /**
@@ -67,7 +70,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const total = this.getTotalPrice();
+    const total = this.getTotalPrice().toFixed(2);
     this.setData({
       list: app.cart,
       totalPrice: total

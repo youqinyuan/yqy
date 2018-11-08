@@ -14,6 +14,9 @@ Page({
   addToCart(e){
     const item = this.data.cakes.filter(cake => cake.id === e.currentTarget.dataset.id)[0]
     app.addToCart(item);
+    wx.showToast({
+      title: '加入购物车成功',
+    })
   },
   toDetail (e) {
     const item = e.currentTarget.dataset.item

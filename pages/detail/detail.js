@@ -14,6 +14,9 @@ Page({
   addToCart (e) {
    const item = e.currentTarget.dataset.item
     app.addToCart(item);
+    wx.showToast({
+      title: '加入购物车成功',
+    })
   },
   addCart () {
     this.setData({

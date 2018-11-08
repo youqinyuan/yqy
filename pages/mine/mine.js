@@ -1,13 +1,34 @@
 // pages/mine/mine.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title: 'mine'
+    message: wx.getStorageSync("name") || {}
   },
-
+  bindGetUserInfo(e){
+    console.log(e)
+    this.setData({
+      message:e.detail.userInfo
+    },() =>{
+      wx.showToast({
+        title: '登录成功',
+      })
+    })
+    wx.setStorageSync("name", e.detail.userInfo)
+  },
+  quit(){
+    wx.removeStorageSync('name')
+    this.setData({
+      message:{}
+    }, () =>{
+      wx.showToast({
+        title: '退出成功',
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
