@@ -23,11 +23,12 @@ Page({
   search(){
     const value = this.data.inputValue;
     const text = this.data.history
-    text.unshift(value)
+    const title = text.filter(item => item !== value)
+    title.unshift(value)
     console.log(value)
     this.setData({
-      inputValue:'',
-      history: text
+      history: title,
+      inputValue: ''
     })
     wx.setStorageSync("ek-search", this.data.history)
   },
