@@ -17,7 +17,7 @@
     <label class="checkbox">
       <checkbox 
       checked="{{item.checked}}"
-      bindtap="changecheck"
+      catchtap="changecheck"
       data-id="{{item.id}}"
       />
     </label>
@@ -41,14 +41,14 @@
   <checkbox-group class="ek-total-box">
     <label class="checkbox">
       <checkbox 
-      checked="{{allcheck}}"
-      bindtap='all'
+      checked="{{isAllChecked}}"
+      bindtap='allchecked'
       />
     </label>
   </checkbox-group>
     <view class="ek-total-text">全选</view>
     <view class="ek-total-number">合计：</view>
-    <view class="ek-total-num">￥{{totalMoney}}</view>
+    <view class="ek-total-num">￥{{totalPrice}}.00</view>
     <view class="ek-total-btn">去结算({{checkedNum}})</view>
   </view>
    <view class="ek-bottom-contain"></view> 

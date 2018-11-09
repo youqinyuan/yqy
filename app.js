@@ -19,7 +19,7 @@ App({
     wx_url_2: '&grant_type=authorization_code'
   },
   cart:wx.getStorageSync("ek-cart") || [],
-  allCheckout:false,
+  isAllChecked:false,
   setBage() {
     const total = this.cart.reduce((result,item) =>{
       result += item.count;
@@ -42,6 +42,7 @@ App({
     }else{
       this.cart.push({
         ...item,
+        checked:false,
         count:1
       });
     }
@@ -74,58 +75,66 @@ App({
     this.setBage();
     return this.cart;
   },
-  //勾选
-  changeAllCheck(){
-    this.allCheckout = !this.allCheckout;
-    if(this.allCheckout){
-      this.cart.map(item=>{
-        item.checked=true;
-        wx.setStorageSync("ek-cart", this.cart)
-        this.totalNum();
-        this.total();
-        return item;
-      });
-    }else{
-      this.cart.map(item =>{
-        item.checked = false;
-        wx.setStorageSync("ek-cart", this.cart)
-        return item
-      })
-    }
+  //单选
+  changecheck(id){
+    this.cart = this.cart.map(item =>{
+      if(item.id == id){
+        item.checked = !item.checked
+      }
+      return item
+    })
+    this.all();
   },
-  //总数量
-  totalNum(){
-    const number = this.cart.reduce((result,item) =>{
+  //总价
+  getTotalPrice(){
+    const total = this.cart.reduce((result,item)=>{
       if(item.checked){
-        result +=item.count;
+        result += item.price * item.count
       }
       return result;
     },0)
-    return number
+    return total;
   },
-  //全选
-  all(){
-    const num=this.totalNum();
-    const len = this.cart.length;
-    if(num == len){
-      this.allCheckout=true;
+  //数量
+  getTotalNum(){
+    const num = this.cart.reduce((result,item) =>{
+      if(item.checked){
+        result +=item.count
+      }
+      return result;
+    },0)
+    return num;
+  },
+ //全选
+  allchecked(){
+    this.isAllChecked = !this.isAllChecked;
+    if (this.isAllChecked){
+      this.cart = this.cart.map(item =>{
+        item.checked = true;
+        return item;
+      })
     }else{
-      this.allCheckout = false;
+      this.cart = this.cart.map(item => {
+        item.checked = false;
+        return item;
+      })
     }
   },
-  //总计价钱
-  total(){
-    const totalprice = app.cart.reduce((result, item) => {
-      result += item.count * item.price
-      return result
-    }, 0);
-    return totalprice
+  //勾选（每一个）
+  all(){
+    const num = this.cart.filter(item => item.checked === true).length
+    const len = this.cart.length;
+    if(num === len){
+      this.isAllChecked = true;
+    }else{
+      this.isAllChecked = false;
+    }
   },
   delCount(id){
     this.cart = this.cart.filter(item => item.id !== id)
     wx.setStorageSync("ek-cart", this.cart)
     this.setBage();
-    this.total();
     return this.cart;
   }
+
 })
