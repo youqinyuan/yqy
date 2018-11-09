@@ -1,0 +1,23 @@
+<!--pages/search/search.wxml-->
+<view class="ek-wrapper">
+  <view class="section">
+    <input  bindinput="bindKeyInput" placeholder="拿破仑蛋糕" auto-focus/>
+  </view>
+  <view class="ek-button" catchtap="search">搜索</view>
+</view>
+<view class="ek-hot">
+  <view class="ek-title">热门搜索:</view>
+  <view class="ek-list">
+    <view class="ek-text" wx:for="{{list}}" wx:key="{{index}}" catchtap='jumpMall'>
+      {{item}}
+    </view>
+  </view>
+</view>
+<view class="ek-hot">
+  <view class="ek-title">搜索历史:</view>
+  <view class="ek-list">
+    <view class="ek-text" wx:for="{{history}}" wx:key="{{index}}" catchtap='jumpMall'>
+      {{item}}
+    </view>
+  </view>
+</view>

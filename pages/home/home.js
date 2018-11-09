@@ -102,6 +102,11 @@ Page({
       url: '/pages/map/map',
     })
   },
+  jumpSearch(){
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
+  },
   toDetail(e) {
     const item = e.currentTarget.dataset.item
     wx.navigateTo({

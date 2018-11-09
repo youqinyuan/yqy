@@ -15,7 +15,7 @@
     <view class="position">
       <image src="../../libs/img/position.png" class="position-img"></image>
     </view>
-    <view class="text">成都市科华路力宝大厦19楼</view>
+    <view class="text">{{locationCity}}</view>
     <view class="phone">
       <image src="../../libs/img/phone.png" class="phone-img"></image>
     </view>
@@ -45,7 +45,7 @@
       </view>
     </view>
   </view>
-  <view class="ek-container">
+  <view class="ek-container" catchtap='jumpSearch'>
     <view class="ek-container-sousuo">
       <image src="../../libs/img/sousuo.png" class="ek-container-img"></image>
     </view>

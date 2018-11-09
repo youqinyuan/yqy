@@ -1,0 +1,47 @@
+/* pages/search/search.wxss */
+.ek-wrapper{
+  display: flex;
+}
+.section{
+  font-size: 28rpx;
+  width: 600rpx;
+  height: 60rpx;
+  border: 2rpx solid #cdcdcd;
+  border-radius: 20rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+input{
+  width: 500rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.ek-button{
+  font-size: 36rpx;
+  color: #d4c709;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+.ek-hot{
+  margin-top: 30rpx;
+  width: 95%;
+  margin-left: 20rpx;
+}
+.ek-title{
+  font-size: 36rpx;
+  color: #cdcdcd;
+}
+.ek-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+.ek-text{
+  display: flex;
+  margin: 8rpx;
+  padding: 14rpx;
+  border-radius: 5rpx;
+  background: #f1efef;
+}

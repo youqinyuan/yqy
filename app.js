@@ -136,5 +136,4 @@ App({
     this.setBage();
     return this.cart;
   }
-
 })
